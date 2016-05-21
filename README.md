@@ -9,7 +9,7 @@
    <body id="home">
       <div class="container">
          <div class="jumbotron">
-            <h1>Big Data & Machine Learning</h1>
+            <h1>Big Data & Machine Learning with Microsoft Azure</h1>
          </div>
          <div class="panel panel-default">
             <div class="panel-heading">
