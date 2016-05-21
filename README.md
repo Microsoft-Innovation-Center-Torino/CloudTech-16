@@ -25,7 +25,7 @@
                      <th>Session</th>
                      <th>Time (min)</th>
                      <th>Activity</th>
-					 <th>Presenter</th>
+					 <th>Speaker</th>
                   </tr>
                   <tr>
                      <td>Microsoft Azure Overview</td>
