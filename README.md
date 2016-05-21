@@ -30,7 +30,7 @@
                   <tr>
                      <td>Microsoft Azure Overview</td>
                      <td>15</td>
-                     <td>[Presentation](AzureOverview/AzureOverview.pptx)</td>
+                     <td>[Presentation](Presentation/Intro.pdf)</td>
 					 <td rowspan=5>Francesco Scullino</td>
                   </tr>
                   <tr>
