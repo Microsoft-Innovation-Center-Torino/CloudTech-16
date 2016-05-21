@@ -28,15 +28,15 @@
 					 <th>Speaker</th>
                   </tr>
                   <tr>
-                     <td>Microsoft Azure Overview</td>
+                     <td>Intro and Azure Overview</td>
                      <td>15</td>
-                     <td>[Presentation](Presentation/Intro.pdf)</td>
-					 <td rowspan=5>Francesco Scullino</td>
+                     <td>[Presentation](Intro/Intro.pdf)</td>
+					 <td rowspan=5>[Francesco Scullino](http://www.ismb.it/francesco.scullino "Francesco Scullino")</td>
                   </tr>
                   <tr>
                      <td rowspan=4>Big Data</td>
                      <td>15</td>
-                     <td>[Intro](BigData/BigData.pptx)</td>
+                     <td>[Intro](BigData/BigData.pdf)</td>
                   </tr>
                   <tr>
                      <td>15</td>
@@ -54,7 +54,7 @@
                      <td rowspan=3>Machine Learning</td>
                      <td>30</td>
                      <td>[Intro](MachineLearning/ML_Presentation_CLOUDTECH2016.pdf)</td>
-					 <td rowspan=3>Claudio Rossi</td>
+					 <td rowspan=3>[Claudio Rossi](http://www.ismb.it/claudio.rossi "Claudio Rossi")</td>
                   </tr>
                   <tr>
 					 <td>20</td>
