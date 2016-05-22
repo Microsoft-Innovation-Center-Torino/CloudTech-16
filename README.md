@@ -34,9 +34,9 @@
 					 <td rowspan=6>[Francesco Scullino](http://www.ismb.it/francesco.scullino "Francesco Scullino")</td>
                   </tr>
                   <tr>
-                     <td rowspan=5>Big Data</td>
+                     <td rowspan=5>[Big Data](BigData/BigData.pdf)</td>
                      <td>15</td>
-                     <td>[Big Data overview](BigData/BigData.pdf)</td>
+                     <td>Big Data overview</td>
                   </tr>
 				  <tr>
                      <td>15</td>
