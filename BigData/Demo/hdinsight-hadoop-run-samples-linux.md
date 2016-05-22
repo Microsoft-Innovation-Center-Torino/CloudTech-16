@@ -59,7 +59,7 @@ Linux-based HDInsight clusters provide a set of MapReduce samples that can be us
 
         Usage: wordcount <in> [<in>...] <out>
 
-    This indicates that you can provide several input paths for the source documents, and the final path is where the output (count of words in the source documents,) will be located.
+    This indicates that you can provide several input paths for the source documents, and the final path is where the output (count of words in the source documents) will be located.
 
 4. Use the following to count all words in the Notebooks of Leonardo Da Vinci, which are provided as sample data with your cluster:
 
