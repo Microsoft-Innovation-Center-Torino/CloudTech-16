@@ -28,12 +28,12 @@
 			    
 			    public void map(Object key, Text value, Context context) throws IOException, InterruptedException
 				{
-			      StringTokenizer itr = new StringTokenizer(value.toString());
-			      while (itr.hasMoreTokens())
-				  {
-					    word.set(itr.nextToken());
-					    context.write(word, one);
-			      }
+				      StringTokenizer itr = new StringTokenizer(value.toString());
+				      while (itr.hasMoreTokens())
+					  {
+						    word.set(itr.nextToken());
+						    context.write(word, one);
+				      }
 			    }
 	      }
 	    
@@ -44,13 +44,13 @@
 			    
 			    public void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException
 				{
-			      int sum = 0;
-			      for (IntWritable val : values)
-				  {
-			    	sum += val.get();
-			      }
-			      result.set(sum);
-			      context.write(key, result);
+				      int sum = 0;
+				      for (IntWritable val : values)
+					  {
+				    	sum += val.get();
+				      }
+				      result.set(sum);
+				      context.write(key, result);
 			    }
 	      }
 	    
@@ -61,8 +61,8 @@
 			    String[] otherArgs = new GenericOptionsParser(conf, args).getRemainingArgs();
 			    if (otherArgs.length != 2)
 				{
-			      System.err.println("Usage: wordcount <in> <out>");
-			      System.exit(2);
+				      System.err.println("Usage: wordcount <in> <out>");
+				      System.exit(2);
 			    }
 
 				// Configure Job
