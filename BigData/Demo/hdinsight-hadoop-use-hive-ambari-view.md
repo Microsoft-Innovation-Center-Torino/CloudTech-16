@@ -12,23 +12,23 @@ Ambari is a management and monitoring utility provided with Linux-based HDInsigh
 
 You can Ambari Views from the Azure Portal; select your HDInsight cluster and then select __Ambari Views__ from the __Quick Links__ section.
 
-![quick links section](/media/quicklinks.png)
+![quick links section](media/quicklinks.png)
 
 You can also navigate directly to Ambari by going to https://CLUSTERNAME.azurehdinsight.net in a web browser (where __CLUSTERNAME__ is the name of your HDInsight cluster,) and then select the set of squares from the page menu (next to the __Admin__ link and button on the left of the page,) to list available views. Select the __Hive view__.
 
-![Selecting ambari views](/media/selecthiveview.png).
+![Selecting ambari views](media/selecthiveview.png).
 
 > [AZURE.NOTE] When accessing Ambari, you will be prompted to authenticate to the site. Enter the admin (default `admin`,) account name and password you used when creating the cluster.
 
 You should see a page similar to the following:
 
-![Image of the hive view page, containing a query editor section](/media/hiveview.png)
+![Image of the hive view page, containing a query editor section](media/hiveview.png)
 
 ##View tables
 
 In the __Database Explorer__ section of the page, select the __default__ entry on the __Databases__ tab. This will display a list of tables in the default database. For a new HDInsight cluster, only one table should exist; __hivesampletable__.
 
-![database explorer with the default database expanded](/media/databaseexplorer.png)
+![database explorer with the default database expanded](media/databaseexplorer.png)
 
 As new tables are added through the steps in this document, you can use the refresh icon in the upper right corner of the Database Explorer to refresh the list of available tables.
 
@@ -86,7 +86,7 @@ Use the following steps from the Hive view to run a Hive query against data incl
 
 Select the __Settings__ icon to the right of the editor.
 
-![icons](/media/settings.png)
+![icons](media/settings.png)
 
 Settings can be used to change various Hive settings, such as changing the execution engine for Hive from Tez (the default,) to MapReduce.
 
@@ -94,17 +94,17 @@ Settings can be used to change various Hive settings, such as changing the execu
 
 Select the __Visual Explain__ icon to the right of the editor.
 
-![icons](/media/visualexplainicon.png)
+![icons](media/visualexplainicon.png)
 
 This is the __Visual Explain__ view of the query, which can be helpful in understanding the flow of complex queries. You can view a textual equivalent of this view by using the __Explain__ button in the Query Editor.
 
-![visual explain image](/media/visualexplain.png)
+![visual explain image](media/visualexplain.png)
 
 ###Tez
 
 Select the __Tez__ icon to the right of the editor.
 
-![icons](/media/tez.png)
+![icons](media/tez.png)
 
 This will display the Directed Acyclic Graph (DAG) used by Tez for this query, if one is available. If you want to view the DAG for queries you've ran in the past, or debug the Tez process, use the Tez View instead.
 
@@ -112,7 +112,7 @@ This will display the Directed Acyclic Graph (DAG) used by Tez for this query, i
 
 Select the __Notifications__ icon to the right of the editor.
 
-![icons](/media/notifications.png)
+![icons](media/notifications.png)
 
 Notifications are messages that are generated when running queries. For example, you will receive a notification when a query is submitted, or when an error occurs.
 
