@@ -48,11 +48,11 @@
                   </tr>
                   <tr>
                      <td>15</td>
-                     <td>Demo: MapReduce with Java and Hive/Pig</td>
+                     <td>[Demo: MapReduce with Java and Hive/Pig](BigData/Demo)</td>
                   </tr>
 				  <tr>
 					 <td>30</td>
-                     <td>Hands on Lab</td>
+                     <td>[Hands on Lab](BigData/HOL/HOL-HDIBatchAnalysisAndPowerBI.md)</td>
                   </tr>
                   <tr>
                      <td rowspan=3>Machine Learning</td>
