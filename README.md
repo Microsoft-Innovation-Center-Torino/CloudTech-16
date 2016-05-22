@@ -31,20 +31,24 @@
                      <td>Intro and Azure Overview</td>
                      <td>15</td>
                      <td>[Presentation](Intro/Intro.pdf)</td>
-					 <td rowspan=5>[Francesco Scullino](http://www.ismb.it/francesco.scullino "Francesco Scullino")</td>
+					 <td rowspan=6>[Francesco Scullino](http://www.ismb.it/francesco.scullino "Francesco Scullino")</td>
                   </tr>
                   <tr>
-                     <td rowspan=4>Big Data</td>
+                     <td rowspan=5>Big Data</td>
                      <td>15</td>
-                     <td>[Intro](BigData/BigData.pdf)</td>
+                     <td>[Big Data overview](BigData/BigData.pdf)</td>
+                  </tr>
+				  <tr>
+                     <td>15</td>
+                     <td>Hadoop</td>
+                  </tr>
+				  <tr>
+                     <td>15</td>
+                     <td>Azure HDInsight</td>
                   </tr>
                   <tr>
                      <td>15</td>
-                     <td>Map Reduce with Java</td>
-                  </tr>
-                  <tr>
-					 <td>15</td>
-                     <td>Map Reduce with Hive and Pig</td>
+                     <td>Demo: MapReduce with Java and Hive/Pig</td>
                   </tr>
 				  <tr>
 					 <td>30</td>
