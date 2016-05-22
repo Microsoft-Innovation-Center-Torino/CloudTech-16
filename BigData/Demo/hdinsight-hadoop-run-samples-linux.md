@@ -69,7 +69,7 @@ Linux-based HDInsight clusters provide a set of MapReduce samples that can be us
 
     Output for this example will be stored in **wasb:///example/data/davinciwordcount**.
 
-    > [AZURE.NOTE] As noted in the help for the wordcount sample, you could also specify multiple input files. For example, `hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-examples.jar wordcount /example/data/gutenberg/davinci.txt /example/data/gutenberg/ulysses.txt /example/data/twowordcount` would count words in both davinci.txt and ulysses.txt.
+    > [AZURE.NOTE] As noted in the help for the wordcount sample, you could also specify multiple input files. For example, `yarn jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-mapreduce-examples.jar wordcount /example/data/gutenberg/davinci.txt /example/data/gutenberg/ulysses.txt /example/data/twowordcount` would count words in both davinci.txt and ulysses.txt.
 
 5. Once the job completes, use the following command to view the output:
 
