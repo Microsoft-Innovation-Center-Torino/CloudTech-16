@@ -86,6 +86,8 @@ Linux-based HDInsight clusters provide a set of MapReduce samples that can be us
 
     Each line represents a word and how many times it occured in the input data.
 
+	Source code [here](wordcount.md "here")
+
 ## Sudoku
 
 The Sudoku example has somewhat unhelpful usage instructions; "Include a puzzle on the command line."
