@@ -28,9 +28,9 @@
 					 <th>Speaker</th>
                   </tr>
                   <tr>
-                     <td>Intro and Azure Overview</td>
+                     <td>[Intro and Azure Overview](Intro/Intro.pdf)</td>
                      <td>15</td>
-                     <td>[Presentation](Intro/Intro.pdf)</td>
+                     <td>Intro</td>
 					 <td rowspan=6>[Francesco Scullino](http://www.ismb.it/francesco.scullino "Francesco Scullino")</td>
                   </tr>
                   <tr>
@@ -55,9 +55,9 @@
                      <td>[Hands on Lab](BigData/HOL/HOL-HDIBatchAnalysisAndPowerBI.md)</td>
                   </tr>
                   <tr>
-                     <td rowspan=3>Machine Learning</td>
+                     <td rowspan=3>[Machine Learning](MachineLearning/ML_Presentation_CLOUDTECH2016.pdf)</td>
                      <td>30</td>
-                     <td>[Intro](MachineLearning/ML_Presentation_CLOUDTECH2016.pdf)</td>
+                     <td>Intro</td>
 					 <td rowspan=3>[Claudio Rossi](http://www.ismb.it/claudio.rossi "Claudio Rossi")</td>
                   </tr>
                   <tr>
@@ -66,7 +66,7 @@
                   </tr>
 				  <tr>
 					 <td>40</td>
-                     <td>Hands on Lab</td>
+                     <td>[Hands on Lab](MachineLearning/HOL/machine-learning-create-experiment.md)</td>
                   </tr>
                </table>
             </div>
