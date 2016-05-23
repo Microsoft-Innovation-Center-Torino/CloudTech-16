@@ -1,35 +1,10 @@
-<properties
-	pageTitle="Create a simple experiment in Machine Learning Studio | Microsoft Azure"
-	description="A first machine learning tutorial for creating a simple experiment to train and test a linear regression model in Azure Machine Learning Studio."
-	keywords="experiment,linear regression,machine learning algorithms,machine learning tutorial,predictive modeling techniques"
-	services="machine-learning"
-	documentationCenter=""
-	authors="garyericson"
-	manager="paulettm"
-	editor="cgronlun"/>
-
-<tags
-	ms.service="machine-learning"
-	ms.workload="data-services"
-	ms.tgt_pltfrm="na"
-	ms.devlang="na"
-	ms.topic="hero-article"
-	ms.date="03/09/2016"
-	ms.author="garye"/>
-
 # Machine learning tutorial: Create your first experiment in Azure Machine Learning Studio
 
 In this first machine learning tutorial, we'll create a linear regression model that predicts the price of an automobile based on different variables such as make and technical specifications. To do this, we'll use Azure Machine Learning Studio to develop and iterate on a simple predictive analytics experiment.
 
-[AZURE.INCLUDE [machine-learning-free-trial](../../includes/machine-learning-free-trial.md)]
-
 A Machine Learning Studio experiment consists of dragging components to a canvas, and connecting them in order to *create a model*, *train the model*, and *score and test the model*. The experiment uses predictive modeling techniques in the form of Machine Learning Studio modules that ingest data, train a model against it, and apply the model to new data. You can also add modules to preprocess data and select features, split data into training and test sets, and evaluate or cross-validate the quality of your model.  
 
 Enter Machine Learning Studio: [https://studio.azureml.net](https://studio.azureml.net), and click the **Get started** button. You can choose either the Guest Access or sign in with your Microsoft account.
-
-For more general information about Machine Learning Studio, see [What is Machine Learning Studio?](machine-learning-what-is-ml-studio.md).
-
->[AZURE.TIP] To download and print a diagram that gives an overview of the capabilities of Machine Learning Studio, see [Overview diagram of Azure Machine Learning Studio capabilities](machine-learning-studio-overview-diagram.md).
 
 
 ## Five steps to create an experiment
@@ -197,15 +172,13 @@ The final experiment should look like this:
 
 Now that you've completed a first machine learning tutorial and have your experiment set up, you can iterate to try to improve the model. For instance, you can change the features you use in your prediction. Or you can modify the properties of the [Linear Regression][linear-regression] algorithm or try a different algorithm altogether. You can even add multiple machine learning algorithms to your experiment at one time and compare two by using the [Evaluate Model][evaluate-model] module.
 
-> [AZURE.TIP] Use the **SAVE AS** button under the experiment canvas to copy any iteration of your experiment. You can see all the iterations of your experiment by clicking **VIEW RUN HISTORY** under the canvas. See [Manage experiment iterations in Azure Machine Learning Studio][runhistory] for more details.
+> [AZURE.TIP] Use the **SAVE AS** button under the experiment canvas to copy any iteration of your experiment. You can see all the iterations of your experiment by clicking **VIEW RUN HISTORY** under the canvas.
 
 [runhistory]: machine-learning-manage-experiment-iterations.md
 
-When you're satisfied with your model, you can deploy it as a web service to be used to predict automobile prices by using new data. See [Deploy an Azure Machine Learning web service][publish] for more details.
+When you're satisfied with your model, you can deploy it as a web service to be used to predict automobile prices by using new data.
 
 [publish]: machine-learning-publish-a-machine-learning-web-service.md
-
-For a more extensive and detailed walkthrough of predictive modeling techniques for creating, training, scoring, and deploying a model, see [Develop a predictive solution by using Azure Machine Learning][walkthrough].
 
 [walkthrough]: machine-learning-walkthrough-develop-predictive-solution.md
 
