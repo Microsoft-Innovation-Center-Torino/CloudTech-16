@@ -29,7 +29,7 @@
                   </tr>
                   <tr>
                      <td>[Intro and Azure Overview](Intro/Intro.pdf)</td>
-                     <td>15</td>
+                     <td>10</td>
                      <td>Intro</td>
 					 <td rowspan=6>[Francesco Scullino](http://www.ismb.it/francesco.scullino "Francesco Scullino")</td>
                   </tr>
@@ -43,11 +43,11 @@
                      <td>Hadoop</td>
                   </tr>
 				  <tr>
-                     <td>15</td>
+                     <td>10</td>
                      <td>Azure HDInsight</td>
                   </tr>
                   <tr>
-                     <td>15</td>
+                     <td>10</td>
                      <td>[Demo: MapReduce with Java and Hive/Pig](BigData/Demo)</td>
                   </tr>
 				  <tr>
