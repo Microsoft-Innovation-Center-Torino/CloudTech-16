@@ -5,8 +5,10 @@ Overall time to complete: **30 minutes**
 Prerequisites:
 
 - **Azure Storage Account**
-- **HDInsight Cluster: if you have not an Azure subscription, you can use the cluster provided by the speaker at https://CT16windows.azurehdinsight.net**
+- **HDInsight Cluster: if you have not an Azure subscription, you can use the cluster provided by the speaker at https://ct16win.azurehdinsight.net**
 - **Azure Storage Account: if you have not an Azure subscription, you can use the storage provided by the speaker at https://ct16.blob.core.windows.net/**
+
+If you want to create your own cluster, create a blob storage account, upload the input data file that you can find at **locaPath\BigData\HOL\data\data.csv**  in the *data* container of the storage account and create your HDInsight cluster.
 
 At the end of this lab you should have achieved: 
 
@@ -23,7 +25,7 @@ This lab will demonstrate batch analysis with aggregation on a data set.  Perfor
 
 	The Apache Hive data warehouse software facilitates querying and managing large datasets residing in distributed storage. Hive provides a mechanism to project structure onto this data and query the data using a SQL-like language called HiveQL.  The query is executed as a MapReduce job on a HDInsight cluster.
 
-In this lab we'll consume a dataset stored in the default Azure Blob Storage of the cluster. The data is device data from  "Smart Home" sensors which contain everything from temperature to light intensity metrics.
+In this lab we'll consume a dataset stored in the default Azure Blob Storage of the cluster. The data is device data from  "Smart Home" sensors which contain everything from temperature to light intensity metrics. The input data file is stored at **locaPath\BigData\HOL\data\data.csv**.
 
 # 3. Using the Hive web interface #
 
@@ -315,7 +317,7 @@ NOTE: it needs to format the Reading column (Column 4) in en-US.
 14. Save the workbook to the desktop.  
 
 
-# 7. Visualizing the HIVE output with Microsoft Power BI through Power View #
+# 7. [Optional] Visualizing the HIVE output with Microsoft Power BI through Power View #
 
 In this lab you will explore the visualization capabilities of Power View. 
 
@@ -350,7 +352,7 @@ Power View is an Excel and web-based data exploration and report authoring tool 
  	![alt text](images/BatchAnalysis/batchAnalysisImg28.png "batchAnalysisImg28.png")   
 
 
-# 8. Using Microsoft Power BI Online (Optional if you have Office 365 and Sharepoint access) #
+# 8. [Optional] Using Microsoft Power BI Online (Optional if you have Office 365 and Sharepoint access) #
 
 With the Power BI sites application, you can transform your SharePoint Online site into a more robust, dynamic location to share and find Excel reports, with a visual, interactive view tailored to BI.
 
