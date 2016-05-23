@@ -10,7 +10,7 @@ Ambari is a management and monitoring utility provided with Linux-based HDInsigh
 
 ##Open the Hive view
 
-You can Ambari Views from the Azure Portal; select your HDInsight cluster and then select __Ambari Views__ from the __Quick Links__ section.
+You can open Ambari Views from the Azure Portal; select your HDInsight cluster and then select __Ambari Views__ from the __Quick Links__ section.
 
 ![quick links section](media/quicklinks.png)
 
@@ -88,7 +88,7 @@ Select the __Settings__ icon to the right of the editor.
 
 ![icons](media/settings.png)
 
-Settings can be used to change various Hive settings, such as changing the execution engine for Hive from Tez (the default,) to MapReduce.
+Settings can be used to change various Hive settings, such as changing the execution engine for Hive from Tez (the default) to MapReduce.
 
 ###Visual explain
 

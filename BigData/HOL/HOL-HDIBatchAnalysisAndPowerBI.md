@@ -2,7 +2,11 @@
 
 Overall time to complete: **30 minutes**
 
-Prerequisites: **Azure Storage Account**, **HDInsight Cluster**
+Prerequisites:
+
+- **Azure Storage Account**
+- **HDInsight Cluster: if you have not an Azure subscription, you can use the cluster provided by the speaker at https://CT16windows.azurehdinsight.net**
+- **Azure Storage Account: if you have not an Azure subscription, you can use the storage provided by the speaker at https://CT16.blob.core.windows.net/**
 
 At the end of this lab you should have achieved: 
 
@@ -17,25 +21,33 @@ This lab will demonstrate batch analysis with aggregation on a data set.  Perfor
 
 # 2. Introduction to Hive #
 
-The Apache Hive data warehouse software facilitates querying and managing large datasets residing in distributed storage. Hive provides a mechanism to project structure onto this data and query the data using a SQL-like language called HiveQL.  The query is executed as a MapReduce job on a HDInsight cluster.
+	The Apache Hive data warehouse software facilitates querying and managing large datasets residing in distributed storage. Hive provides a mechanism to project structure onto this data and query the data using a SQL-like language called HiveQL.  The query is executed as a MapReduce job on a HDInsight cluster.
 
-In the "Hands on Lab 1" we uploaded a dataset to our HDInsight container using azcopy. In this lab we'll consume this dataset. The data is device data from  "Smart Home" sensors which contain everything from temperature to light intensity metrics.
+In this lab we'll consume a dataset stored in the default Azure Blob Storage of the cluster. The data is device data from  "Smart Home" sensors which contain everything from temperature to light intensity metrics.
 
 # 3. Using the Hive web interface #
 
 The HDInsight cluster provides a web based interface to execute Hive queries.  
 
-1. 	Return to the HDInsight cluster in the Azure Portal and click on the and click on the "Dashboard" button at the top of the screen..
+1. 	If you have an Azure subscription and your own HDInsight cluster, return to the HDInsight cluster in the Azure Portal and click on the and click on the "Dashboard" button at the top of the screen..
 
 	![alt text](images/BatchAnalysis/queryConsole-advcamp.png "Query Console") 
+
+	Otherwise go to https://CT16windows.azurehdinsight.net
 
 2. 	Enter the credentials you initially used when creating the HDInsight cluster when presented with the login dialog. 
 
 	![alt text](images/BatchAnalysis/batchAnalysisImg1.png    "batchAnalysisImg1.png") 
 
+	If you use the speaker cluster, enter the ollowing credentials:
+	- Username: admin
+	- Password: Cloudtech.16
+
 3. 	The **Getting Started Gallery** will be displayed. Several samples and common solutions are available from the gallery. 
 
 	![alt text](images/BatchAnalysis/batchAnalysisImg2.png "batchAnalysisImg2.png")
+
+You can continue to follow this tutorial or to choose one of the sample in the gallery.
 
 4. 	Click on the Hive Editor link at the top of the screen.  Note that a sample query is loaded into the query editor.  
 
@@ -53,9 +65,9 @@ Hive processes may include using intermediate tables to transform data.  These t
 
 ## 4.1 Creating the HIVE source table ##
 
-The following steps will associate the source data loaded Azure Blob Storage with a Hive table.
+The following steps will associate the source data loaded from Azure Blob Storage with a Hive table.
 
-1.	Copy the following hive query into the editor window to create an EXTERNAL table over the data loaded in Hands on Lab 1.  A copy of this statement is stored at **localPath\Scripts\Hive\1_CreateDeviceReadings.txt**. 
+1.	Copy the following hive query into the editor window to create an EXTERNAL table over the data loaded in Hands on Lab 1.  A copy of this statement is stored at **locaPath\BigData\HOL\scripts\Hive\1_CreateDeviceReadings.txt**. 
 	
 	Note that in this case the data file is loaded prior to the schema. This demonstrates the "schema on read" nature of Hive, which means the schema defined in the CREATE TABLE statement is applied when a SELECT statement is issued on the table.
 
@@ -70,7 +82,7 @@ The following steps will associate the source data loaded Azure Blob Storage wit
         LOCATION 'wasb://data@<storage account name>.blob.core.windows.net/input';
 	```
 
-	n.b. Update the last line in query and replace <storage account name> with the storage account you created in Hands on Lab 1.
+	n.b. Update the last line in query and replace <storage account name> with the storage account you created before or provided by the speaker.
 
 2. 	Click the Submit button to execute the query.
 
@@ -100,9 +112,9 @@ NOTE: Typically data is captured by calendar day, so, the input folder would be 
 
 ## 4.2 Average reading by device type query ##
 
-In this step we will calculate the average of the measures for every type of device, tacking the table created before as data source.
+In this step we will calculate the average of the measures for every type of device, using the table created before as data source.
 
-1.	Copy the following query and replace the text in the editor window to create a table for aggregated data and insert data from the previously created DeviceReadings table.  A copy of this statement is stored at **localPath\Scripts\Hive\2_CreateAverageReadingByType.txt**. 
+1.	Copy the following query and replace the text in the editor window to create a table for aggregated data and insert data from the previously created DeviceReadings table.  A copy of this statement is stored at **locaPath\BigData\HOL\scripts\Hive\2_CreateAverageReadingByType.txt**. 
 
 	It is common in Hadoop batch processing to iterate through data processing of source data and store denormalized data.
 
@@ -121,7 +133,7 @@ In this step we will calculate the average of the measures for every type of dev
 		GROUP BY TYPE;
 	```
 
-	n.b. Update the last line in the CREATE TABLE query and replace <storage account name> with the storage account you created in Hands on Lab 1.
+	n.b. Update the last line in the CREATE TABLE query and replace <storage account name> with the storage account you created before or provided by the speaker.
 
 2.	Click the Submit button to execute the query and wait for the job to complete.
 
@@ -137,7 +149,7 @@ In this step we will calculate the average of the measures for every type of dev
 
 In this step we group the data by device type, timestamp and room number.
 
-1.	Return to the Hive Editor.  Copy the following query to the editor window to aggregate an average reading by minute.  A copy of this statement is stored at **localPath\Scripts\Hive\3_CreateAverageReadingByMinute.txt**. 
+1.	Return to the Hive Editor.  Copy the following query to the editor window to aggregate an average reading by minute.  A copy of this statement is stored at **locaPath\BigData\HOL\scripts\Hive\3_CreateAverageReadingByMinute.txt**. 
 
 	```SQL
 	DROP TABLE IF EXISTS AverageReadingByMinute;
@@ -154,7 +166,7 @@ In this step we group the data by device type, timestamp and room number.
        GROUP BY TYPE, concat(substr(sensorDateTime, 1, 16), ":00.0000000Z"), roomNumber;
 	```
 	
-	n.b. Update the last line in the CREATE TABLE query and replace <storage account name> with the storage account you created in Hands on Lab 1.
+	n.b. Update the last line in the CREATE TABLE query and replace <storage account name> with the storage account you created before or provided by the speaker.
 
 2. 	Click the Submit button to execute the query and wait for the job to complete.
 
@@ -163,7 +175,7 @@ In this step we group the data by device type, timestamp and room number.
 
 In this step we will calculate the maximum value for every type of sensor.
 
-1. 	Copy the following query to the editor window to create a table with maximum device values.  A copy of this statement is stored at **localPath\Scripts\Hive\4_CreateMaximumReading.txt**. 
+1. 	Copy the following query to the editor window to create a table with maximum device values.  A copy of this statement is stored at **locaPath\BigData\HOL\scripts\Hive\4_CreateMaximumReading.txt**. 
 
 	```SQL
 	DROP TABLE IF EXISTS MaximumReading;
@@ -183,7 +195,7 @@ In this step we will calculate the maximum value for every type of sensor.
     GROUP BY mr.type, mr.reading;
 	```
 	
-	n.b. Update the last line in the CREATE TABLE query and replace <storage account name> with the storage account you created in Hands on Lab 1.
+	n.b. Update the last line in the CREATE TABLE query and replace <storage account name> with the storage account you created before or provided by the speaker.
 
 2. 	Click the Submit button to execute the query and wait for the job to complete.
 
@@ -192,7 +204,7 @@ In this step we will calculate the maximum value for every type of sensor.
 
 In this step we will calculate the minimum value for every type of sensor.
 
-1. 	Copy the following query to the editor window to create a table to store minumum device reading values.  A copy of this statement is stored at **localPath\Scripts\Hive\5_CreateMinimumReading.txt**.   
+1. 	Copy the following query to the editor window to create a table to store minumum device reading values.  A copy of this statement is stored at **locaPath\BigData\HOL\scripts\Hive\5_CreateMinimumReading.txt**.   
 
     ```SQL
     DROP TABLE IF EXISTS MinimumReading;
@@ -212,14 +224,14 @@ In this step we will calculate the minimum value for every type of sensor.
     GROUP BY mr.type,  mr.reading;
     ```
     
-	n.b. Update the last line in the CREATE TABLE query and replace <storage account name> with the storage account you created in Hands on Lab 1.
+	n.b. Update the last line in the CREATE TABLE query and replace <storage account name> with the storage account you created before or provided by the speaker.
 
 2. 	Click the Submit button to execute the query and wait for the job to complete.
 
 3. 	Close the Hive Editor.
 
 
-# 5. Drop the Cluster #
+# 5. [Optional] Drop the Cluster #
 
 The nature of HDInsight allows you to create clusters on demand, and only pay for the time needed to process data.  Once we completed the above steps, the HDInsight cluster may be dropped.  Data in the storage accounts will still be available for analysis, as demonstrated later in the lab. 
 
@@ -230,7 +242,7 @@ The nature of HDInsight allows you to create clusters on demand, and only pay fo
 
 At the end of this section you will have created five new Hive tables, and output data to the storage account.  The next sections will demonstrate using Microsoft Power BI to connect to the data, shape the data, and create visualizations. 
 
-# 6. HDInsight Integration with Microsoft Power BI through PowerQuery #
+# 6. [Optional] HDInsight Integration with Microsoft Power BI through PowerQuery #
 
 Those who depend on data often use Excel to shape, filter and organize data.  Power Query is now available as an add-in with Excel to provide a visual environment to build repeatable data shaping processes.  In many ways, this can be considered "Self-Service ETL" with a strength in shaping data through a familiar Excel interface. 
 
