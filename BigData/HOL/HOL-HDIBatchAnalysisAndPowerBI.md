@@ -6,7 +6,7 @@ Prerequisites:
 
 - **Azure Storage Account**
 - **HDInsight Cluster: if you have not an Azure subscription, you can use the cluster provided by the speaker at https://CT16windows.azurehdinsight.net**
-- **Azure Storage Account: if you have not an Azure subscription, you can use the storage provided by the speaker at https://CT16.blob.core.windows.net/**
+- **Azure Storage Account: if you have not an Azure subscription, you can use the storage provided by the speaker at https://ct16.blob.core.windows.net/**
 
 At the end of this lab you should have achieved: 
 
